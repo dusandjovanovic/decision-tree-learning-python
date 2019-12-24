@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "decision-tree-learning-python", "decision-tree-learning-python\decision-tree-learning-python.pyproj", "{392F6801-30F3-4D58-9B98-DFBACDC36655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{392F6801-30F3-4D58-9B98-DFBACDC36655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{392F6801-30F3-4D58-9B98-DFBACDC36655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9714E74-BA0D-41AA-82E5-B927DD49DE18}
+	EndGlobalSection
+EndGlobal
