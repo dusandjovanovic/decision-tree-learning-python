@@ -5,7 +5,7 @@ import pprint as pprint
 
 epsilon = numpy.finfo(float).eps
 
-main_attr = 'play'
+main_attr = 'dangerous'
 main_dataset_csv = 'dataset.csv'
 
 def find_entropy(dataframe):
