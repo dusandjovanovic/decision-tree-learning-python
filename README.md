@@ -26,7 +26,11 @@ Redosled primera može da se menja pre pokretanja algoritma (za neke primere pod
 
 **2. Problem za primenu ID3 algoritma:**
 
+Primenom ID3 algoritma može se dobiti stablo odluke na osnovu priloženog skupa ulaznih podataka. Ovakvo stablo se zatim može koristiti za klasifikaciju novih objekata koji nisu u polaznom skupu. Stablo odluke je jedan od načina rešavanja ovakvih problema klasifikacija i ovaj metod se oslanja na učenje algoritma na osnovu polaznog skupa podataka.
+
 **3. Implementacija ID3 algoritma:**
+
+Za implementaciju algoritma koriste se samo osnovne biblioteke Python okruženja. S obzirom na složenost problema nije neophodno koristiti open-source biblioteke.
 
 **3.1. Parametri ID3 algoritma:**
 Svi ulazni argumenti algoritma su parametrizovani.
