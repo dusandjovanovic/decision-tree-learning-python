@@ -47,7 +47,7 @@ Ovo je primer formiranog stabla na osnovu primera ulaznog skupa podataka:
         |      |    |
         |      |   ->Feet
         |      |       |
-        |      |      ->no ..
+        |      |       ->no ..
         |      |       |
         |      |       |
         |      |       |
