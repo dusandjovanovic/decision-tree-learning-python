@@ -25,6 +25,52 @@ Svaki fajl treba da ima listu primera gde je svaki u posebnoj liniji. Primer je 
     
 Redosled primera može da se menja pre pokretanja algoritma (za neke primere podataka ovo može da ima značaja na rezultat, u većini slučajeva ne).
 
+#### Formirano stablo odluke
+
+__Terminalni__ čvor treba da bude predstavljen kao:
+
+    <klasifikacija>
+
+Ovo je primer formiranog stabla na osnovu primera ulaznog skupa podataka:
+
+    Sharp
+        |
+        ->no
+        |  |
+        |  ->Size
+        |     |
+        |      ->large
+        |      |   |
+        |      |   -><NO>
+        |      |
+        |      ->medium
+        |      |    |
+        |      |   ->Feet
+        |      |       |
+        |      |      ->no ..
+        |      |       |
+        |      |       |
+        |      |       |
+        |      |       ->yes ..
+        |      |           
+        |      |
+        |      ->small
+        |          |
+        |          -><NO>
+        |
+        ->yes
+           |
+           ->Domesticated
+                |
+                ->no
+                |   |
+                |   -><YES>
+                |
+                ->yes
+                |   |
+                |   -><NO>
+                |
+
 
 **2. Problem za primenu ID3 algoritma:**
 
