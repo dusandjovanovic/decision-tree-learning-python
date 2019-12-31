@@ -104,7 +104,7 @@ Na slikama se može videti rezultat algoritma u obliku stabla, a pre toga i skup
 
 [screenshot_dataset]: metadata/screenshot_dataset.png
 
-U konzolnom prozoru se nakon **formiranja stabla ono i prikazuje**. Zatim, korisnik može da unese do tada nepostojeći objekat popunjen na isti način kao i ostali objekti dataseta. Taj objekat se **klasifikuje** i prikazuje **rezultat po formiranom stablu**. 
+U konzolnom prozoru se nakon **formiranja stabla ono i prikazuje**. Zatim, generiše se novi objekat popunjen poput ostalih objekata dataseta. Taj objekat se **klasifikuje** i prikazuje **rezultat po formiranom stablu** - odnosno vrši se predikcija po stablu. 
 
 ![alt text][screenshot_tree]
 
