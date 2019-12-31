@@ -64,7 +64,16 @@ def build_tree(dataframe, tree = None):
     return tree
 
 def predict(attributes, tree):
-    return 0
+    node = tree
+
+    if type(node) is dict:
+        for key in node.keys():
+            x = node[key]
+            y = x[attributes[key]]
+            predict(attributes, node[key][attributes[key]]);
+    else:
+        print(f'\nSample for prediction: {attributes}.')
+        print(f'\nPrediction for entered values is {node}.\n')
 
 def main():
     dataframe = pandas.read_csv(main_dataset_csv)
