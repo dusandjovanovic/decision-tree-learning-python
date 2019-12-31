@@ -1,6 +1,28 @@
 # Mašinsko učenje: Implementacija ID3 algoritma u programskom jeziku Python
 
-**1. Predlog problema:**
+**1. Predlog problema:** Klasifikacija životinja prema osobinama i donošenje odluke da li je neka vrsta opasna. Očekuje se da svi ulazni podaci dataset-a budu dodati u `dataset.csv`. Potrebno je unositi vrednosti za više kolona.
+
+#### Atributi
+Atributi koji se koriste u dataset fajlovima su ograničeni i treba da budu konkretnih vrednosti. Kako se opisuju životinje, skup tih opisnih atributa dat je u u nastavku.
+
+    size: small, medium, large
+    sharp teeth: yes, no
+    feet: yes, no
+    habitat: land, water
+    domesticated: yes, no
+    dangerour: yes, no
+    
+*Podaci treba da budu jedinstveni i da se formiraju po potrebi* na osnovu stvarnih smislenih primera, u suprotnom algoritam neće formirati smislena stabla odluke.
+
+#### Dataset fajlovi
+Svaki fajl treba da ima listu primera gde je svaki u posebnoj liniji. Primer je skup atributa odvojenih zarezom gde svaka vrednost treba da odgovara listi atributa.
+
+    snake:small,yes,no,land,no,yes
+    bear:medium,yes,yes,land,no,yes
+    deer:medium,no,yes,land,no,no
+    
+Redosled primera može da se menja pre pokretanja algoritma (za neke primere podataka ovo može da ima značaja na rezultat, u većini slučajeva ne).
+
 
 **2. Problem za primenu ID3 algoritma:**
 
