@@ -50,12 +50,12 @@ Na slikama se može videti rezultat algoritma u obliku stabla, a pre toga i skup
  
 ![alt text][screenshot_dataset]
 
-[screenshot_tree]: metadata/screenshot_dataset.jpg
+[screenshot_tree]: metadata/screenshot_dataset.png
 
 U konzolnom prozoru se nakon **formrianja stabla ono i prikazuje**.
 
 ![alt text][screenshot_tree]
 
-[screenshot_dataset]: metadata/screenshot_tree.jpg
+[screenshot_dataset]: metadata/screenshot_tree.png
 
 ## Implementacioni detalji
