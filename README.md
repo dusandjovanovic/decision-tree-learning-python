@@ -65,14 +65,69 @@ def main():
     d3_tree = build_tree(dataframe)
     ...
   
-if __name__== "__main__":
-    main()
+def build_tree(dataframe, tree = None):
+    Class = dataframe.keys()[-1]
+
+    node = find_winner(dataframe)
+    att_value = numpy.unique(dataframe[node])
+
+    if tree is None:
+        tree = {}
+        tree[node] = {}
+
+    for value in att_value:
+        subtable = get_subtable(dataframe, node, value)
+        cl_value, counts = numpy.unique(subtable[main_attr], return_counts = True)
+
+        if len(counts) == 1:
+            tree[node][value] = cl_value[0]
+        else:
+            tree[node][value] = build_tree(subtable)
+
+    return tree
 ```
+
+`buld_tree` je rekurzivna metoda koja će izgraditi stablo odluke. U svakom koraku se poziva pomoćna metoda `find_winner` za nalaženje čvora koji će se dodati u razmatranom koraku algoritma. Ova pomoćna metoda treba da pretraži sve ključeve, odnosno atribute i pronadje razliku entropije i entropije konkretnog atributa. Zatim, treba razmatrati nadjeni pobednički čvor i njegove moguće vrednosti.
+
+```python
+find_entropy(dataframe) - find_entropy_attribute(dataframe, key)
+```
+
+Nakon što se pobednički čvor pronadje, treba naći pod-tabelu koja isključuje vrednosti atributa tog čvora. Ovakva pod-tabela je zatim iskorišćena za rekurzivan poziv `buld_tree` metode.
 
 ### Nalaženje entropije i metoda `find_entropy`
 
-...
+```python
+def find_entropy(dataframe):
+    Class = dataframe.keys()[-1]
+    entropy = 0
+    values = dataframe[Class].unique()
+    for value in values:
+        fraction = dataframe[Class].value_counts()[value] / len(dataframe[Class])
+        entropy += -fraction * numpy.log2(fraction)
+    return entropy
+```
+
+Entropija celog skupa podataka je mera nesigurnosti tih podataka. Računa se nad celim dataset-om po dobro poznatoj formuli i obuhvata sve atribute.
 
 ### Nalaženje entropije atributa i metoda `find_entropy_attribute`
 
-...
+Entropija atributa odnosi se na *Information gain* vrednost, odnosno efektivnu promenu entropije nakon odlučivanja. Dobitak informacija se ogleda u relativnoj promeni entropije, pritom razmatrajući jedan od atributa.
+
+```python
+def find_entropy_attribute(dataframe, attribute):
+    Class = dataframe.keys()[-1]
+    target_variables = dataframe[Class].unique()
+    variables = dataframe[attribute].unique()
+    entropy2 = 0
+    for variable in variables:
+        entropy = 0
+        for target_variable in target_variables:
+            num = len(dataframe[attribute][dataframe[attribute] == variable][dataframe[Class] == target_variable])
+            den = len(dataframe[attribute][dataframe[attribute] == variable])
+            fraction = num / (den + epsilon)
+            entropy += -fraction * numpy.log2(fraction + epsilon)
+        fraction2 = den / len(dataframe)
+        entropy2 += -fraction2 * entropy
+    return abs(entropy2)
+```
