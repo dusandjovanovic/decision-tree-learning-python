@@ -66,7 +66,7 @@ def main():
     ...
   
 if __name__== "__main__":
-  main()
+    main()
 ```
 
 ### Nalaženje entropije i metoda `find_entropy`
