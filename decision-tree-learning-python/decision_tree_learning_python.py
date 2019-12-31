@@ -68,6 +68,7 @@ def main():
     d3_tree = build_tree(dataframe)
 
     pprint.pprint(d3_tree)
+    obj = input("")
   
 if __name__== "__main__":
   main()
