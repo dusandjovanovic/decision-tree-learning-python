@@ -36,15 +36,10 @@ Za implementaciju algoritma koriste se samo osnovne biblioteke Python okruženja
 
 **3.1. Parametri ID3 algoritma:**
 
-Svi ulazni argumenti algoritma su parametrizovani.
+Važni ulazni argumenti algoritma su parametrizovani.
 
-1. **xyz** -
-2. **xyz** -
-3. **xyz** -
-4. **xyz** -
-5. **xyz** -
-6. **xyz** -
-7. **xyz** -
+1. **main_attr** - ime kolone koja predstavlja odlučujuči atribut - *dangerous*
+2. **main_dataset_csv** - ime fajla ili potpuna putanja do ulaznih podataka - *dataset.csv*
 
 Na slikama se može videti rezultat algoritma u obliku stabla, a pre toga i skup ulaznih podataka. Skup podataka, odnosno *dataset*, učitava se iz fajla.
  
