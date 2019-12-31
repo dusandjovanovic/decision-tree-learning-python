@@ -114,6 +114,8 @@ Entropija celog skupa podataka je mera nesigurnosti tih podataka. Računa se nad
 
 Entropija atributa odnosi se na *Information gain* vrednost, odnosno efektivnu promenu entropije nakon odlučivanja. Dobitak informacija se ogleda u relativnoj promeni entropije, pritom razmatrajući jedan od atributa.
 
+Tehnički, predstavlja **smanjenje entropije do koga dolazi kada se dataset podeli po atributu**. Osnovna ideja formiranja stabla odluke upravo se dešava ovde. U metodi `buld_tree` se nalazi pobednički čvor za koji će se dobiti najveća povratna vrednost metode `find_entropy_attribute`, odnosno čvor sa najvećom *Information gain* vrednošću. Atribut koji definiše takav čvor će biti **sledeći odlučujući čvor**.
+
 ```python
 def find_entropy_attribute(dataframe, attribute):
     Class = dataframe.keys()[-1]
