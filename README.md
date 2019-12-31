@@ -195,11 +195,20 @@ def find_entropy_attribute(dataframe, attribute):
 
 Predikcija, odnosno klasifikacija novonastalog objekta, može se tražiti nakon formiranja stabla. Primer predikcije je bez unošenja atributa sa ulaza, već sa predefinisanim vrednostima kao što se može videti u kodu.
 
-Rezultat predikcije je terminalni čvor `<YES>` ili `<NO>`, različite vrednosti u zavinosti od čvorova odluke formiranog stabla. 
+Rezultat predikcije je terminalni čvor `<YES>` ili `<NO>`, različite vrednosti u zavinosti od čvorova odluke formiranog stabla. Ovo je rekurzivna metoda koja prolazi kroz celo stablo, sve do jednog od terminalnih čvorova.
 
 ```python
 def predict(attributes, tree):
-    return 0
+    node = tree
+    if type(node) is dict:
+        for key in node.keys():
+            x = node[key]
+            y = x[attributes[key]]
+            predict(attributes, node[key][attributes[key]]);
+    else:
+        print(f'\nSample for prediction: {attributes}.')
+        print(f'\nPrediction for entered values is {node}.\n')
+
 
 attributes = {
     "size": "medium",
