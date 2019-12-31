@@ -72,7 +72,14 @@ def main():
 
     pprint.pprint(d3_tree)
 
-    attributes = []
+    attributes = {
+        "size": "medium",
+        "sharp": "no",
+        "feet": "yes",
+        "habitat": "land",
+        "domesticated": "no"
+    }
+
     predict(attributes, d3_tree)
   
 if __name__== "__main__":
