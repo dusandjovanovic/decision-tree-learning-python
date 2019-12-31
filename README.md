@@ -47,11 +47,22 @@ Ovo je primer formiranog stabla na osnovu primera ulaznog skupa podataka:
         |      |    |
         |      |   ->Feet
         |      |       |
-        |      |       ->no ..
+        |      |       ->no 
+        |      |       |   |
+        |      |       |   ->Habitat
+        |      |       |       |
+        |      |       |       ->land
+        |      |       |       |   |
+        |      |       |       |   -><NO>
+        |      |       |       |
+        |      |       |       ->water
+        |      |       |           |
+        |      |       |           -><YES>
         |      |       |
-        |      |       |
-        |      |       |
-        |      |       ->yes ..
+        |      |       ->yes
+        |      |           |
+        |      |           -><NO>
+        |      |
         |      |           
         |      |
         |      ->small
