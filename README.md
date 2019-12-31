@@ -54,3 +54,25 @@ U konzolnom prozoru se nakon **formiranja stabla ono i prikazuje**. Zatim, koris
 [screenshot_tree]: metadata/screenshot_tree.png
 
 ## Implementacioni detalji
+
+### Inicijalizacija i metoda `build_tree`
+
+Pre bilo kakve klasifikacije potrebno je formirati stablo odluke. Ulazni podaci se učitavaju iz fajla, formira se *dataframe* i prosledjuje ovo metodi. Dataframe će za svaku od kolona, odnosno atributa, imati polje niza svih dodatih vrednosti.
+
+```python
+def main():
+    dataframe = pandas.read_csv(main_dataset_csv)
+    d3_tree = build_tree(dataframe)
+    ...
+  
+if __name__== "__main__":
+  main()
+```
+
+### Nalaženje entropije i metoda `find_entropy`
+
+...
+
+### Nalaženje entropije atributa i metoda `find_entropy_attribute`
+
+...
