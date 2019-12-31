@@ -63,12 +63,17 @@ def build_tree(dataframe, tree = None):
 
     return tree
 
+def predict(attributes, tree):
+    return 0
+
 def main():
     dataframe = pandas.read_csv(main_dataset_csv)
     d3_tree = build_tree(dataframe)
 
     pprint.pprint(d3_tree)
-    obj = input("")
+
+    attributes = []
+    predict(attributes, d3_tree)
   
 if __name__== "__main__":
     main()
