@@ -190,3 +190,24 @@ def find_entropy_attribute(dataframe, attribute):
         entropy2 += -fraction2 * entropy
     return abs(entropy2)
 ```
+
+### Klasifikacija i metoda `predict`
+
+Predikcija, odnosno klasifikacija novonastalog objekta, može se tražiti nakon formiranja stabla. Primer predikcije je bez unošenja atributa sa ulaza, već sa predefinisanim vrednostima kao što se može videti u kodu.
+
+Rezultat predikcije je terminalni čvor `<YES>` ili `<NO>`, različite vrednosti u zavinosti od čvorova odluke formiranog stabla. 
+
+```python
+def predict(attributes, tree):
+    return 0
+
+attributes = {
+    "size": "medium",
+    "sharp": "no",
+    "feet": "yes",
+    "habitat": "land",
+    "domesticated": "no"
+}
+
+predict(attributes, d3_tree)
+```
